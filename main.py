@@ -355,11 +355,11 @@ def main():
             bottom: 0;
             left: 0;
             width: 100%;
-            background: linear-gradient(to right, #5D3FD3, #702963); /* Gradient background */
+            background: linear-gradient(to right, #AA9CFC, #FC9CE7); /* Gradient background */
             text-align: center;
             padding: 10px;
             font-size: 12px;
-            color: #BDB5D5;
+            color: #555;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -375,11 +375,11 @@ def main():
         }
         </style>
         <div class="footer">
-            Created by Abdul Rafay Ahsan
-            <img src="https://commons.wikimedia.org/wiki/File:Python-logo-notext.svg" alt="Python Logo">
+            Created by Abdul Rafay Ahsan  estb 09/2024
+            <img src="https://banner2.cleanpng.com/20190623/yp/kisspng-python-computer-icons-programming-language-executa-1713885634631.webp" alt="Python Logo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo">
+            <img src="https://www.datanami.com/wp-content/uploads/2023/06/Cohere-Color-Logo.png" alt="Cohere Logo">
             <img src="https://streamlit.io/images/brand/streamlit-mark-color.svg" alt="Streamlit Logo">
-            <img src="https://cohere.ai/img/cohere-logo.svg" alt="Cohere Logo">
         </div>
         """,
         unsafe_allow_html=True
@@ -387,10 +387,16 @@ def main():
 # Color codes used previously:
 #footer = f1f1f1 
 # #ff7e5f, #feb47b
-# Purple mix = #5D3FD3, #702963
+# Purple to dark purple gradient = #5D3FD3, #702963
+# Purple to pink gradient = #AA9CFC, #FC9CE7
+# Sandy brown is #f4a460
 #915F6D
 
 #text = #555
+# text color with Purple to dark purple = #BDB5D5
+
+# Python Logo Previous: https://commons.wikimedia.org/wiki/File:Python-logo-notext.svg
+# Cohere Logo Previous: https://cohere.ai/img/cohere-logo.svg
 
 if __name__ == "__main__":
     main()
