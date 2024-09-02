@@ -123,7 +123,7 @@ def main():
     # Sidebar for navigation
     st.sidebar.title("Navigation Panel")
     st.sidebar.write("How may Kyrax help you?")
-    option = st.sidebar.selectbox("Choose a function", ["Chatbox", "Decision Tree Classification", "Machine Learning Classifications"])
+    option = st.sidebar.selectbox("Choose a function", ["Chatbox", "Decision Tree Classification", "Machine Learning Classifications", "FitnessPal", "Filter Spam", "Management System", "General Knowledge Quiz"])
     st.sidebar.write("###### More features coming soon!")
 
     if option == "Chatbox":
@@ -327,6 +327,24 @@ def main():
             
         else:
             st.write("Awaiting dataset upload...")
+
+    elif option == "FitnessPal":
+        st.title("Muscle Wiki and Exercise Generator")
+        st.write("Gain knowledge about the main muscles in the human body, and exercises to build and improve such muscles. Consider Kyrax your very own trainer")
+
+    elif option == "Filter Spam":
+        st.title("Filter Content and Identify Spam")
+        st.write("Clean up your messages and emails with the filteration technique carried out by Kyrax")
+
+    elif option == "Management System":
+        st.title("Supported Management System")
+        st.write("Get assistance by Kyrax as it helps you categorize and sort different inventories, libraries, billings, projects and much more")
+
+    elif option == "General Knowledge Quiz":
+        st.title("General Knowledge Quiz Generator")
+        st.write("Test and enlighten yourself with Kyrax as it makes an interesting quiz about different facts and figures about this world.")
+
+        
 
     # Footer Section
     st.markdown(
