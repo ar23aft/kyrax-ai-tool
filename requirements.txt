@@ -1,0 +1,5 @@
+cohere
+streamlit
+matplotlib
+numpy
+pandas
