@@ -192,18 +192,61 @@ def main():
         st.write("Making decision trees all by yourself can be tiring. Why not let Kyrax do the work while you sit back?  😉 It will automatically fix your data if it has non-numerical values, and show you the original data, as well as the updated data.")
         # st.write("It will automatically fix your data if it has non-numerical values, and show you the original data, as well as the updated data.")
         # st.write("Oh and worried about fixing the data, such as NaN/None/Non-numerical Values? Relax, it will do it for you.")
-        uploaded_file = st.file_uploader("Choose a CSV file:", type="csv")
 
-        if uploaded_file is not None:
-            df = pd.read_csv(uploaded_file)
+        # uploaded_file = st.file_uploader("Choose a CSV file:", type="csv")
+
+        # Drop down menu for dataset selection:
+        dataset_option = st.selectbox(
+            "Choose a dataset:",
+            ("Medicines Dataset", "Golf Dataset", "Plant Growth Dataset", "Upload your dataset")
+        )
+
+        if dataset_option == "Medicines Dataset":
+            df = pd.read_csv('datasets/Medicines.csv')
             st.write("Original Data:")
             st.write(df)
-            
+        
             st.write("Converted Data:")
             df_processed = auto_convert(df)
             st.write(df_processed)
 
             decision_tree_classifier(df_processed)
+
+        elif dataset_option == "Golf Dataset":
+            df = pd.read_csv('datasets/golf_df.csv')
+            st.write("Original Data:")
+            st.write(df)
+        
+            st.write("Converted Data:")
+            df_processed = auto_convert(df)
+            st.write(df_processed)
+
+            decision_tree_classifier(df_processed)
+
+        elif dataset_option == "Plant Growth Dataset":
+            df = pd.read_csv('datasets/plant_growth_data.csv')
+            st.write("Original Data:")
+            st.write(df)
+        
+            st.write("Converted Data:")
+            df_processed = auto_convert(df)
+            st.write(df_processed)
+
+            decision_tree_classifier(df_processed)
+
+        elif dataset_option == "Upload your dataset":
+            uploaded_file = st.file_uploader("Choose a CSV file:", type="csv")
+        
+            if uploaded_file is not None:
+                df = pd.read_csv(uploaded_file)
+                st.write("Original Data:")
+                st.write(df)
+            
+                st.write("Converted Data:")
+                df_processed = auto_convert(df)
+                st.write(df_processed)
+
+                decision_tree_classifier(df_processed)
 
     elif option == "Machine Learning Classifications":
         # st.title("🔮 Predicting Certain Data Points")
@@ -329,22 +372,46 @@ def main():
             st.write("Awaiting dataset upload...")
 
     elif option == "FitnessPal":
-        st.title("Muscle Wiki and Exercise Generator")
+        st.markdown(
+            """
+            <h2 class="underline">💪 Muscle Wiki and Exercise Generator</h2>
+            """,
+            unsafe_allow_html=True
+        )
+        # st.title("Muscle Wiki and Exercise Generator")
         st.write("Gain knowledge about the main muscles in the human body, and exercises to build and improve such muscles. Consider Kyrax your very own trainer")
 
     elif option == "Filter Spam":
-        st.title("Filter Content and Identify Spam")
+        st.markdown(
+            """
+            <h2 class="underline">📝 Filter Content and Identify Spam</h2>
+            """,
+            unsafe_allow_html=True
+        )
+        # st.title("Filter Content and Identify Spam")
         st.write("Clean up your messages and emails with the filteration technique carried out by Kyrax")
 
     elif option == "Management System":
-        st.title("Supported Management System")
+        st.markdown(
+            """
+            <h2 class="underline">🗃️ Management Aiding System</h2>
+            """,
+            unsafe_allow_html=True
+        )
+        # st.title("Supported Management System")
         st.write("Get assistance by Kyrax as it helps you categorize and sort different inventories, libraries, billings, projects and much more")
 
     elif option == "General Knowledge Quiz":
-        st.title("General Knowledge Quiz Generator")
+        st.markdown(
+            """
+            <h2 class="underline">🤓 General Knowledge Quiz Generator</h2>
+            """,
+            unsafe_allow_html=True
+        )
+        # st.title("General Knowledge Quiz Generator")
         st.write("Test and enlighten yourself with Kyrax as it makes an interesting quiz about different facts and figures about this world.")
 
-        
+
 
     # Footer Section
     st.markdown(
